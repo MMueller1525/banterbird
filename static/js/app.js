@@ -50,6 +50,7 @@ setInterval( async () => {
         try {
             const response = await fetch("/api/post");
             const posts = await response.json();
+            document.getElementById("feed").innerHTML = "";
             posts.forEach(post => {
                 renderPost(post);
             });
