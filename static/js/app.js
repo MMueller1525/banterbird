@@ -44,6 +44,17 @@ window.onload = async () => {
 
     }catch(error) {
         console.error("FIXXX THAAAT THIING, YOOUUR DAAARK SOOOUL", error);
-    }
-
+    };
 };
+setInterval( async () => {
+        try {
+            const response = await fetch("/api/post");
+            const posts = await response.json();
+            posts.forEach(post => {
+                renderPost(post);
+            });
+    
+        }catch(error) {
+            console.error("FIXXX THAAAT THIING, YOOUUR DAAARK SOOOUL", error);
+        }
+}, 5000); //Fetch new posts every 5 seconds
