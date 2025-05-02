@@ -2,12 +2,16 @@
 <html>
 <head>
     <title>Banterbird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Tagesschrift&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     <script src="/static/js/app.js" defer></script>
 </head>
 <body>
     <h1>Banterbird</h1>
     <div>
-        Logged in as: <strong id="username">admin</strong>
+        Logged in as: <strong id="username">anonymous</strong>
     </div>
     <div>
         <h3>New Post</h3>
@@ -25,5 +29,8 @@
             <hr>
         </div>
     </template>
+    <script>
+        document.getElementById("username").innerText = localStorage.getItem("username");
+    </script>
 </body>
 </html>
